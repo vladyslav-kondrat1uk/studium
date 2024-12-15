@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Stefan Korecko" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="screenStyle.css" />
+  <link rel="stylesheet" href="css/treesBlog.css" media="screen" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <title>My Blog about Volleyball</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo-container">
+      <svg width="40" height="40" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(0,512) scale(0.1,-0.1)" fill="#000000" stroke="none">
+          <path
+            d="M2435 4848 c-766 -43 -1445 -453 -1843 -1113 -146 -243 -245 -515 -299 -820 -25 -143 -25 -567 0 -710 38 -218 95 -406 180 -594 298 -658 916 -1152 1622 -1296 213 -43 502 -57 713 -34 824 89 1540 623 1866 1392 239 561 235 1230 -9 1793 -382 884 -1273 1436 -2230 1382z m355 -328 c353 -44 688 -181 975 -398 33 -25 109 -93 169 -151 174 -171 293 -333 396 -546 55 -111 125 -293 117 -301 -2 -2 -43 28 -91 66 -456 367 -979 538 -1571 517 -125 -5 -343 -25 -390 -37 -7 -2 21 223 36 295 35 164 121 396 193 520 30 51 31 51 166 35z m-550 -97 c-121 -282 -179 -583 -167 -868 13 -302 77 -543 228 -853 38 -78 69 -146 69 -150 0 -17 -150 -227 -224 -313 -77 -89 -251 -249 -271 -249 -5 1 -35 35 -66 78 -187 255 -310 509 -377 777 -44 175 -57 288 -56 490 0 198 17 329 64 523 34 139 124 402 142 415 34 23 243 119 319 146 113 40 295 86 355 90 21 1 20 -3 -16 -86z m-1141 -618 c-136 -660 10 -1317 418 -1879 36 -49 67 -94 69 -101 6 -15 -148 -75 -280 -110 -106 -27 -264 -51 -404 -60 l-93 -7 -43 94 c-82 174 -142 394 -167 602 -15 126 -6 431 15 546 51 275 150 526 292 743 77 118 201 274 210 264 1 -1 -7 -42 -17 -92z m2093 -439 c463 -72 854 -284 1212 -657 l126 -132 0 -83 c0 -90 -22 -270 -47 -374 -22 -96 -83 -280 -92 -280 -5 0 -28 26 -52 58 -310 415 -727 681 -1214 775 -141 28 -312 47 -412 47 l-63 0 -54 108 c-29 59 -70 151 -90 205 -38 102 -92 304 -84 312 5 5 184 31 268 39 88 8 406 -4 502 -18z m-214 -992 c138 -23 249 -53 358 -95 149 -58 142 -43 85 -184 -182 -452 -450 -786 -823 -1029 -185 -120 -469 -236 -713 -291 l-115 -26 -102 52 c-210 108 -363 224 -543 411 -136 141 -140 125 35 148 383 50 769 227 1039 476 163 149 316 334 414 498 l41 69 118 -7 c66 -4 158 -13 206 -22z m884 -424 c109 -102 220 -235 303 -363 l57 -88 -28 -42 c-87 -132 -260 -322 -394 -430 -286 -231 -641 -381 -1010 -427 -46 -5 -157 -10 -245 -10 l-160 0 133 65 c407 197 701 455 949 832 84 127 193 335 244 465 19 49 39 88 45 88 6 0 53 -40 106 -90z" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="title-menu">
+      <h1>My Volleyball Vlog</h1>
+      <button id="menuTitle">Menu</button>
+    </div>
+
+    <nav id="menuIts" class="menu mnHide">
+      <a href="#welcome">Welcome!</a>
+      <a href="#articles">Articles</a>
+      <a class="nav-links" href="#artInsert">Add article</a>
+      <a href="#opinions">Visitor opinions</a>
+      <a href="#addOpinion">Add your opinion</a>
+    </nav>
+
+    <div id="g_id_onload" data-client_id="1020411774195-5188l46t4hjjpt97gjefonhrdtf2lq5l.apps.googleusercontent.com"
+      data-context="signin" data-ux_mode="popup" data-callback="handleCredentialResponse" data-auto_prompt="false">
+    </div>
+
+    <div id="google-signin" class="g_id_signin" data-type="standard" data-shape="pill" data-theme="outline"
+      data-text="signin_with" data-size="large" data-callback="handleCredentialResponse">
+    </div>
+
+    <button id="sign-out" onclick="signOut()">Log Out</button>
+    <p id="user-name">Not signed in</p>
+
+  </header>
+
+  <main id="router-view"></main>
+
+  <footer style="background-color: #405D72;" class="footer">
+    <div class="footer_end">
+      <p>&copy; kndrtk vld 2024. All rights reserved.</p>
+      <p>Outlook: <a href="mailto:vladyslav.kondratiuk@student.sk">vladyslav.kondratiuk@student.tuke.sk</a></p>
+    </div>
+  </footer>
+
+  <script id="template-welcome" type="text/template">
+    <aside class="sidebar-left">
+      <div class="wrap">
+        <a href="https://www.instagram.com/vl_adislaiv/" class="icon instagram" target="_blank"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/watch?v=h39zUFtZM_8&ab_channel=VladDorosh" class="icon youtube"
+          target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </aside>
+      <article>
+          <div class="main_text">
+              <p>
+                  <b>Welcome to my very first website!</b>
+                  I thought about what will be my website and finally came to the idea to tell people about my hobby.
+                  I know that it is not very useful and interesting for someone, but I did it.
+                  I`ll try to explain what volleyball is today.
+              </p>
+          </div>
+
+          <div class="main-couple">
+              <div class="main-page-img">
+                  <img srcset="fig/Image_1810_small.png 200w,
+                  fig/Image_1810_medium.png 350w,
+                  fig/Image_1810_large.png 500w" sizes="(max-width: 350px) 100vw,
+                  (max-width: 500px) 50vw, 33vw" src="fig/Image_1810_large.png" alt="image_1810-large">
+              </div>
+              <div class="main-page-text" style="background-color: #F7E7DC;">
+                  <p>
+                      Well, as you can see from the photo, this is me, my hobby is volleyball, and I have devoted almost
+                      9 years of my life to it, and I do not regret choosing this sport for myself.
+                      It has helped me in many ways. Thanks to it, I have not only become physically healthier, stronger,
+                      and more resilient but also learned to work in a team, communicate with players on the field,
+                      understand people by their behavior, and made many friends and new acquaintances even outside my
+                      country.
+                      At first, I saw volleyball only as an opportunity to distract myself from my studies and improve my
+                      physical fitness a little bit, but in the end, it turned out that volleyball became my lifestyle.
+                      This is a short story of my acquaintance with this sport, and now I will try to tell you what this
+                      sport is.
+                  </p>
+              </div>
+              <table class="table1">
+                  <caption class="ar5">
+                    <h2><b>Advantages and Disadvantages of Volleyball</b></h2>
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th colspan="2" id="n_t">Volleyball</th>
+                    </tr>
+                    <tr>
+                      <th class="n_t2">Advantages</th>
+                      <th class="n_t2">Disadvantages</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="6">
+                        <ul>
+                          <li>
+                            Enhances communication skills through coordination and
+                            strategy.
+                          </li>
+                          <li>
+                            Teaches collaboration and builds trust among teammates.
+                          </li>
+                          <li>Develops conflict resolution skills and resilience.</li>
+                          <li>
+                            Highlights individual roles, reinforcing collective
+                            success.
+                          </li>
+                          <li>
+                            Encourages motivation and creates a sense of belonging.
+                          </li>
+                          <li>
+                            Promotes adaptability and quick thinking in strategy.
+                          </li>
+                          <li>
+                            Boosts morale and provides leadership development
+                            opportunities.
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        Potential for injuries, especially to knees, shoulders, and
+                        ankles.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Fast-paced environment can lead to stress and anxiety.</td>
+                    </tr>
+                    <tr>
+                      <td>Conflicts may arise between players, impacting morale.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Individual performance can be overshadowed in team settings.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Limited playing time for some players on larger teams.</td>
+                    </tr>
+                    <tr>
+                      <td>Access to quality facilities and coaching can vary.</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th colspan="2">Information from Internet resources</th>
+                    </tr>
+                  </tfoot>
+                </table>
+          </div>
+
+          
+      </article>
+      <aside class="sidebar-right">
+        <section class="wrap">
+          <a href="https://en.volleyballworld.com/news" class="icon volleyball-news" target="_blank"><i
+              class="fa-solid fa-volume-low"></i></a>
+        </section>
+      </aside>
+    </script>
+
+  <script id="template-articles" type="text/template">
+      <div id="try">  
+        <label>
+          <input type="checkbox" id="my" {{#isFiltered}}checked{{/isFiltered}} class="lable1"> Show only my articles
+        </label> 
+      </div> 
+        {{#articles}}
+          <article>
+              <div id="artn">
+              <h2><a href="{{detailLink}}">{{title}}</a></h2></div>
+              <p>by {{author}}</p>
+              {{#imageLink}}
+              <img src="{{imageLink}}" alt="{{title}}" style="max-width: 600px; max-height: 300px; display: block; margin: 10px;" />
+              {{/imageLink}}
+              <div class="content">{{{content}}}</div> <!-- Display the article content as HTML -->
+              <p>Keywords: {{tags}}</p>
+          </article>
+        {{/articles}}
+        <footer>
+            <div class="pagination">
+                {{#hasPrevious}}
+                <a href="#articles/{{previousPage}}/{{totalCount}}">&#60&#60 Previous</a>
+                {{/hasPrevious}}
+                {{#hasNext}}
+                <a href="#articles/{{nextPage}}/{{totalCount}}">Next >></a>
+                {{/hasNext}}
+            </div>
+            <a href="#menuTitle" class="back-to-menu" style="background-color:white">Back to the menu</a>
+        </footer>
+    </script>
+
+  <script id="template-articles-error" type="text/template">
+
+      <article>
+          <h2>Articles acquisition failed</h2>
+          <p>
+              {{errMessage}}
+          </p>
+      </article>
+      <footer  class="menuLink"><a href="#menuTitle">Back to the menu</a></footer>
+    </script>
+
+  <script id="template-opinions" type="text/template">
+      <article  id="artOpinions">
+          <div class="text1">
+              <h1>Visitors Opinions</h1>
+          </div>
+          <div id="opinionsContainer" class="coment">
+
+
+      {{#.}}
+      <section>
+          <div class="feedback">
+          <h3>{{name}}</h3>
+          <p>{{comment}}
+              <style>
+                  #opinionsContainer {
+                      max-width: 100%; 
+                      word-wrap: break-word; 
+                  }
+
+                  .feedback {
+                      white-space: normal; 
+                      overflow-wrap: break-word; 
+                  }
+
+                  textarea {
+                      resize: vertical; 
+                      word-wrap: break-word; 
+                      overflow-y: auto; 
+                  }
+              </style>
+
+          </p>
+          <p><strong>Feedback Type:</strong> {{feedbackType}}</p>
+          <p><strong>Keywords:</strong> {{keywords}}</p>
+          <p>{{subscribe ? "Subscribed to updates." : "Not subscribed."}}</p>
+          <p>{{willReturn ? "I will return to this page." : "Sorry, one visit was enough."}}</p>
+          {{#email}}
+          <p><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></p>
+          {{/email}}
+          {{#imageUrl}}
+          <p><strong>Shared Image:</strong></p>
+          <img src="{{imageUrl}}" alt="User-provided image" style="max-width: 200px; max-height: 200px;">
+          {{/imageUrl}}
+          <p>{{created}}</p>
+      </section>
+      {{/.}}
+      {{^.}}
+      <section>
+          Sorry, no opinions found.
+      </section>
+      {{/.}}
+          </div>
+      </div>
+
+          <footer  class="menuLink"><a href="#menuTitle" class="back-to-menu1" style="background-color: white">Back to the menu</a></footer>
+      </article>
+    </script>
+
+  <script id="template-addOpinion" type="text/template">
+      <article  id="artOpnFrm">
+          <h2>Your Opinion</h2>
+          <p>
+              Please, use the form below to state your opinion about this page.
+          </p>
+          <form id="opnFrm">
+              <div>
+                  <label for="nameElm">Your name:</label>
+                  <input type="text" name="login" id="nameElm" size="20" maxlength="50" placeholder="Enter your name here" required />
+              </div>
+              <div>
+                  <label for="emailElm">Your email:</label>
+                  <input type="email" id="emailElm" name="email" placeholder="Enter your email here" required />
+              </div>
+              <div>
+                  <label for="imageUrlElm">Image URL (optional):</label>
+                  <input type="url" id="imageUrlElm" name="imageUrl" placeholder="Enter image URL" />
+              </div>
+              <p>Your impressions:</p>
+              <div class="radio-checkbox-container">
+                  <div class="radio-group">
+                      <div>
+                          <label for="positive" id="po">Positive</label>
+                          <input type="radio" id="positive" name="feedbackType" value="positive" required>
+                      </div>
+                      <div>
+                          <label for="neutral" id="ne">Neutral</label>
+                          <input type="radio" id="neutral" name="feedbackType" value="neutral" required>
+                      </div>
+                      <div>
+                          <label for="negative" id="neg">Negative</label>
+                          <input type="radio" id="negative" name="feedbackType" value="negative" required>
+                      </div>
+                  </div>
+                  <div class="checkbox-group">
+                      <div>
+                          <label for="subscribeElm">Subscribe to updates</label>
+                          <input type="checkbox" id="subscribeElm" name="subscribe">
+                      </div>
+                      <div>
+                          <label for="willReturnElm">Will return to this page</label>
+                          <input type="checkbox" id="willReturnElm" name="willReturn">
+                      </div>
+                  </div>
+              </div>
+                  <label for="opnElm">Your opinion:</label>
+                  <textarea name="comment" id="opnElm" cols="50" rows="3" placeholder="Express your opinion here" required></textarea>
+              </div>
+              <div>
+                  <label for="keywordsElm">Keywords:</label>
+                  <input type="text" id="keywordsElm" name="keywords" list="suggestedKeywords" placeholder="Enter keywords" />
+                  <datalist id="suggestedKeywords">
+                      <option value="volleyball history">
+                      <option value="events">
+                      <option value="equipment">
+                      <option value="homepage">
+                      <option value="volleyball rules">
+                  </datalist>
+              </div>
+              <p>
+                  <button type="reset">Reset</button>
+                  <button type="submit">Submit</button>
+              </p>
+          </form>
+
+
+
+          <footer  class="menuLink" ><a href="#menuTitle" class="back-to-menu2" style="background-color: white">Back to the menu</a></footer>
+      </article>
+    </script>
+
+  <script id="template-article" type="text/template">
+      <article>
+          <h3>{{title}}</h3>
+          <p>by {{author}}</p>
+          {{#imageLink}}
+          <figure>
+              <img src="{{imageLink}}" alt="article figure" class="article-img" />
+          </figure>
+          {{/imageLink}}
+          <div>{{{content}}}</div>
+          <p>Keywords: {{tags}}</p>
+      </article>
+
+      <footer>
+        <div id="knopky">
+          <a href="{{backLink}}" class="linkAsButton1" style="color:white"><< Back</a>
+          <a href="{{editLink}}" class="linkAsButton1" style="color:white">Edit</a>
+          <a href="{{deleteLink}}" class="linkAsButton1" style="color:white">Delete</a>
+          <a href="#menuTitle" class="linkAsButton1" style="color:white">Up to the menu</a>
+        </div>
+      </footer>
+
+      <section id="comment-section">
+          <h3>Comments:</h3>
+          <div id="comments-container">
+              <ul id="comments-list">
+                  {{#comments}}
+                  <li>
+                      <p><strong>{{author}}</strong> wrote:</p>
+                      <p>{{comment}}</p>
+                      <p><em>{{created}}</em></p>
+                  </li>
+                  {{/comments}}
+              </ul>
+          </div>
+          <div id="comment-container">
+              <div class="comment-title" style="color: #004085">Leave your comment here:</div>
+              <form id="comment-form">
+                  <div class="form-group">
+                      <label for="author" class="form-label">
+                          <span class="label-text" style="color: #004085">Author:</span>
+                          <input type="text" id="author" name="author" class="input-field" placeholder="Enter your name">
+                      </label>
+                      <label for="comment" class="form-label">
+                          <span class="label-text" style="color: #004085">Your comment:</span>
+                          <textarea id="comment" name="comment" class="textarea-field" placeholder="Write your comment"></textarea>
+                      </label>
+                  </div>
+                  <button type="submit" class="add-comment-btn">Add Comment</button>
+              </form>
+          </div>
+      </section>
+    </script>
+
+  <script id="template-article-form" type="text/template">
+          <article id="articleFormContainer">
+              <div id="ad">
+              <h2>{{formTitle}}</h2>
+              </div>
+               <br><br>
+
+              <form id="articleForm">
+                  <label for="author">Author:</label>
+                  <input type="text" name="author" id="author" value="{{author}}" size="50"
+                         title="Article author, max. length 100 characters."
+                         maxlength="100" placeholder="e.g. Ján Trieska" />
+                  <br>
+                  <label for="title">Title:</label>
+                  <input type="text" name="title" id="title" value="{{title}}" size="50"
+                         maxlength="100" pattern="\S[\S\s]*" placeholder="e.g. My story." required
+                         title="Article title, mandatory item, max. length: 100 characters.
+      The first character must not be a space."  />
+                  <br>
+                  <label for="imageLink">Image (url):</label>
+                  <input type="url" name="imageLink" id="imageLink" value="{{imageLink}}" size="50"
+                         title="Image URL, max. length 100 characters." maxlength="100"/>
+                  <br>
+                  <label></label>
+                  <div id="upload">
+                  <button type="button" id="btShowFileUpload">
+                      Upload image
+                  </button>
+                </div>
+                  <fieldset class="added hiddenElm" id="fsetFileUpload">
+                      <legend>Image Upload</legend>
+                      <input type="file" id="flElm" name="file" accept="image/jpeg, image/png"/>
+                      <br />
+                      <!-- <button type="button" id="btFileUpload">
+                          Send image to server </button>
+                      <button type="button" id="btCancelFileUpload">
+                          Cancel uploading </button> -->
+                  </fieldset>
+
+
+                  <br>
+                  <label for="content">Article content:</label>
+                  <textarea
+                          name="content" id="content" spellcheck="true" lang="sk"
+                          cols="50" rows="20" required
+                          title="Article content, mandatory item, can be plain text or in HTML.">
+                    {{content}}
+                  </textarea>
+                  <br>
+                  <label for="tags">Keywords:</label>
+                  <input  type="text" name="tags" id="tags" value="{{tags}}" size="50"
+                  
+                          title="Keyword list, comma separated." placeholder="e.g. village, drama" />
+                          
+                  <br> <br>
+                  <p>
+                  <button type="reset"> Reset Form </button>
+                  <button type="submit"> {{submitBtTitle}} </button>
+                  </p>
+              </form>
+          </article>
+
+          <footer>
+            <div id="knopka">
+              <a href="{{backLink}}" class="linkAsButton" style="color:white"><< Back</a>
+              <a href="#menuTitle" class="linkAsButton" style="color:white">Up to the menu</a>
+            </div>
+            </footer>
+    </script>
+
+  <script id="template-comments" type="text/template">
+        <ul id="comments-list">
+            {{#comments}}
+            <li>
+                <p><strong>{{author}}</strong> wrote:</p>
+                <p>{{comment}}</p>
+                <p><em>{{created}}</em></p>
+            </li>
+            {{/comments}}
+        </ul>
+        <div class="pagination1">
+          {{#hasPrevious}}
+          <a href="javascript:void(0)" id="previous-page" class="pagination-button">&#60&#60 Previous</a>
+          {{/hasPrevious}}
+          {{#hasNext}}
+          <a href="javascript:void(0)" id="next-page" class="pagination-button">Next >></a>
+          {{/hasNext}}
+        </div>
+    </script>
+
+
+  <!--JavaScript code, inserted as a module-->
+  <script type="module" src="js/index.js"></script>
+</body>
+
+</html>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+  function handleCredentialResponse(response) {
+    const userInfo = parseJwt(response.credential);
+    const userFullName = `${userInfo.given_name} ${userInfo.family_name}`;
+    localStorage.setItem("googleUser", JSON.stringify({ name: userFullName }));
+    updateUserState(userFullName);
+  }
+
+  function parseJwt(token) {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(
+      atob(base64).split('').map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join('')
+    );
+    return JSON.parse(jsonPayload);
+  }
+
+  function updateUserState(userName) {
+    const nameDisplay = document.getElementById("user-name");
+    const signOutButton = document.getElementById("sign-out");
+    const signInButton = document.getElementById("google-signin");
+
+    if (userName) {
+      nameDisplay.innerText = `Signed in as: ${userName}`;
+      nameDisplay.style.display = "block";
+      signOutButton.style.display = "inline";
+      signInButton.style.display = "none";
+    } else {
+      nameDisplay.innerText = "";
+      nameDisplay.style.display = "none";
+      signOutButton.style.display = "none";
+      signInButton.style.display = "inline";
+    }
+  }
+
+  function signOut() {
+    localStorage.removeItem("googleUser");
+    updateUserState(null);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("googleUser"));
+    updateUserState(user?.name || null);
+  });
+</script>
+
+<!-- <script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+    function handleCredentialResponse(response) {
+        const userInfo = parseJwt(response.credential);
+        // Зберігаємо ім'я користувача у LocalStorage
+        const userFullName = `${userInfo.given_name} ${userInfo.family_name}`;
+        localStorage.setItem("googleUser", JSON.stringify({ name: userFullName }));
+        updateUserState(userFullName);
+    }
+
+    function parseJwt(token) {
+        const base64Url = token.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(
+            atob(base64).split('').map(function (c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join('')
+        );
+        return JSON.parse(jsonPayload);
+    }
+
+    function updateUserState(userName) {
+        const nameDisplay = document.getElementById("user-name");
+        const signOutButton = document.getElementById("sign-out");
+        const signInButton = document.getElementById("google-signin");
+
+        if (userName) {
+            nameDisplay.innerText = `Signed in as: ${userName}`;
+            nameDisplay.style.display = "block";
+            signOutButton.style.display = "inline";
+            signInButton.style.display = "none";
+        } else {
+            nameDisplay.innerText = "";
+            nameDisplay.style.display = "none";
+            signOutButton.style.display = "none";
+            signInButton.style.display = "inline";
+        }
+    }
+
+    function signOut() {
+        localStorage.removeItem("googleUser");
+        updateUserState(null);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const user = JSON.parse(localStorage.getItem("googleUser"));
+        updateUserState(user?.name || null);
+    });
+</script> -->

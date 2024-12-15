@@ -1,0 +1,1014 @@
+
+html {
+    font-size: 100%;
+    font-family: "Tw Cen MT", Arial, Helvetica, sans-serif;
+    font-style: normal; 
+    font-weight: normal; 
+    text-align: justify; 
+    color: black;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: rgb(63, 38, 0);
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #982d3b;
+}
+
+body > * {
+    margin: 0.5rem;
+}
+
+    /* body > header{
+        border-radius: 1rem;
+        padding:0.5rem;
+        text-align:center;
+        background-color: rgb(204,153,0);
+    } */
+
+
+/* body > footer{
+    font-size: 0.8rem;
+} */
+
+/* main footer{
+    margin-top: 0.5em;
+} */
+
+main > article{
+    background-color: #F7E7DC;;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > article > *{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    
+}
+
+main > article > h2{
+    background-color: #F7E7DC;
+    border-radius: 1rem;
+    margin: 0;
+    width: 75%;
+}
+
+/* body > aside{
+    background-color: #F7E7DC;
+    border-radius: 1rem;
+    color:  #F7E7DC;;
+    font-size: 0.9em;
+    height: 8em;
+    padding: 0.5em;
+} */
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+li{
+    flex-grow: 1; 
+}
+/* body > footer{
+    order: 1; 
+} */
+
+
+
+/* @media only screen and (min-width: 600px){
+    body{
+        min-width: 35rem;
+        max-width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media only screen and (max-width: 599px){
+    body{
+        width: 100%;
+    }
+} */
+
+
+
+
+
+.menu {
+    text-align: left;
+    padding-left: 0.5em;
+}
+
+#menuIts {
+  position: absolute;
+  top: 100%; /* Відображення меню нижче кнопки */
+  right: 0; /* Прив'язка до правого краю меню */
+  padding: 0.5em;
+  max-width: 8em;
+  min-width: 7em;
+  border-radius: 0.5rem;
+  background-color: #758694; /* Заміна кольору фону */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
+  transition: all 0.3s ease-in-out; /* Плавний ефект */
+  z-index: 10; /* Встановлення пріоритету поверх інших елементів */
+}
+
+#menuIts:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Більша тінь при наведенні */
+}
+
+#menuIts > a {
+  display: block;
+  padding: 0.4em 0.6em;
+  font-size: 0.9em;
+  color: #f7e7dc; /* Основний колір тексту */
+  text-align: center;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+#menuIts > a:hover {
+  background-color: #4382b6; /* Світлий фон при наведенні */
+  color: #f7e7dc; /* Колір тексту при наведенні */
+  transform: scale(1.05); /* Легке збільшення */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Додатковий ефект тіні */
+}
+
+#menuTitle {
+    border: 0;
+    background-color: #1d3141; /* Основний колір кнопки */
+    color: #f7e7dc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5rem;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative; /* Відносне позиціонування для прив'язки меню */
+    z-index: 11; /* Пріоритет для кнопки меню */
+}
+
+#menuTitle:hover {
+    background-color: #4382b6; /* Зміна фону при наведенні */
+    color: #f7e7dc; /* Колір тексту при наведенні */
+    transform: scale(1.05); /* Легке збільшення */
+}
+
+
+
+.mnHide {display:none;}
+
+.mnShow {
+  display: block; /* Відображення меню */
+  position: absolute;}
+
+
+
+
+
+label{
+    vertical-align: top;
+    display: inline-block; 
+    min-width: 5.5em;
+}
+
+form{
+    padding-bottom: 1em;
+}
+
+h3 > i {
+    font-size: 0.8em;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.add-comment-btn {
+    background-color: #2c732e;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.add-comment-btn:hover {
+    background-color: #1ead25;
+}
+
+#comment-form-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.label-text {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.textarea-field {
+    height: 80px;
+    resize: none;
+}
+
+.form-buttons {
+    margin-top: 20px;
+}
+
+.form-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.reset-btn {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+}
+
+.reset-btn:hover {
+    background-color: #e41f1f;
+}
+
+#artOpnFrm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  margin: 2em auto;
+  width: 90%;
+  max-width: 600px;
+  background-color: #f7f7f7;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+#artOpnFrm h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  color:#F7E7DC;
+  background-color: #758694;
+}
+
+#artOpnFrm form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#artOpnFrm form div {
+  margin-bottom: 1em;
+}
+
+#artOpnFrm label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+#artOpnFrm input,
+#artOpnFrm textarea {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+#artOpnFrm input:required:focus,
+#artOpnFrm textarea:required:focus {
+  background-color: #ffe6e6; /* Light red for focus */
+}
+
+#artOpnFrm input:required:valid,
+#artOpnFrm textarea:required:valid {
+  background-color: #e6ffe6; /* Light green for valid */
+}
+
+#artOpnFrm .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Align radio inputs horizontally */
+#artOpnFrm p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+#artOpnFrm button {
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#artOpnFrm button[type="submit"] {
+  background-color: #758694;
+  color:#f7e7dc; 
+  box-shadow: 1px 7px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  margin-right: 0;
+}
+
+#artOpnFrm button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#artOpnFrm button[type="reset"] {
+  background-color: #dc3545;
+  box-shadow: 1px 7px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+#artOpnFrm button[type="reset"]:hover {
+  background-color: #ff0019;
+}
+
+#artOpnFrm .form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+@media (max-width: 768px) {
+  #artOpnFrm {
+    width: 95%;
+    padding: 1.5em;
+  }
+
+  #artOpnFrm button {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+
+  #artOpnFrm .form-buttons {
+    flex-direction: column;
+  }
+}
+
+.radio-checkbox-container {
+  display: flex;
+  justify-content: space-between; /* Розташування груп по двох сторонах */
+  margin: 20px 0; /* Додаємо вертикальний відступ для естетики */
+  padding: 10px; /* Відступи всередині контейнера */
+  border: 1px solid #ccc; /* Рамка навколо контейнера */
+  border-radius: 8px; /* Згладжені кути */
+  background-color: #f9f9f9; /* Світлий фон */
+}
+
+/* Група радіокнопок */
+.radio-group {
+  display: flex;
+  flex-direction: column; /* Елементи вертикально */
+  gap: 1em; /* Відстань між елементами */
+  flex: 1; /* Розтягуємо до половини контейнера */
+  padding-right: 10px; /* Відступ праворуч */
+}
+
+/* Група чекбоксів */
+.checkbox-group {
+  display: flex;
+  flex-direction: column; /* Елементи вертикально */
+  gap: 1em; /* Відстань між елементами */
+  flex: 1; /* Розтягуємо до половини контейнера */
+  padding-left: 10px; /* Відступ ліворуч */
+}
+
+/* Мітки і кнопки */
+.radio-group label,
+.checkbox-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Вирівнювання кнопок */
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+  margin-left: 0; /* Вирівнювання кнопок */
+}
+
+ #po, #ne, #neg{
+  margin-left: 25%;
+} 
+
+#articleFormContainer {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#articleFormContainer h2 {
+  text-align: center;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Стиль для полів вводу */
+#articleForm input[type="text"],
+#articleForm input[type="url"],
+#articleForm input[type="file"],
+#articleForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Стиль для кнопок */
+#articleForm button {
+  background-color: #758694;
+  color:#f7e7dc; 
+  box-shadow: 1px 7px 10px rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin: 5px;
+}
+
+#articleForm button:hover {
+  background-color: #3878bc;
+}
+
+#articleForm button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Легенда і поле завантаження файлів */
+#articleForm fieldset {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+}
+
+#articleForm legend {
+  font-size: 14px;
+  color: #666;
+}
+
+#ad{
+    align-items: center;
+}
+
+#articleForm p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+#articleForm button {
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Стиль для кнопки submit */
+#articleForm button[type="submit"] {
+  background-color: #758694;
+  color:#f7e7dc; 
+  box-shadow: 1px 7px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  margin-right: 1em;
+}
+
+#articleForm button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Стиль для кнопки reset */
+#articleForm button[type="reset"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+#articleForm button[type="reset"]:hover {
+  background-color: #ff0019;
+}
+
+/* Групування кнопок */
+#articleForm .form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+/* Адаптивна верстка для мобільних пристроїв */
+@media (max-width: 768px) {
+  #articleForm {
+    width: 95%;
+    padding: 1.5em;
+  }
+
+  #articleForm button {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+
+  #articleForm .form-buttons {
+    flex-direction: column;
+  }
+} 
+
+#fsetFileUpload {
+  text-align: center;
+}
+
+#fsetFileUpload button {
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0.5em;
+}
+
+/* Стиль для кнопки "Send image to server" */
+#btFileUpload {
+  background-color: #007bff;
+  color: white;
+}
+
+#btFileUpload:hover {
+  background-color: #0056b3;
+}
+
+/* Стиль для кнопки "Cancel uploading" */
+#btCancelFileUpload {
+  background-color: #dc3545;
+  color: white;
+}
+
+#btCancelFileUpload:hover {
+  background-color: #c82333;
+}
+
+/* Загальний стиль для пагінації */
+.pagination {
+  display: flex;
+  align-items: center;
+  margin: 1em 13%; /* Відступи з боків */
+}
+
+/* Стиль для посилань, щоб виглядали як кнопки */
+.pagination a {
+  display: inline-block;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #406a96; /* Синій фон */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Ефект при наведенні на кнопки */
+.pagination a:hover {
+  background-color: #758694; /* Темніший синій */
+  transform: scale(1.05); /* Легке збільшення */
+}
+
+.pagination1 {
+  display: flex;
+  align-items: center;
+  margin: 0.8em 5%; /* Відступи з боків */
+}
+
+/* Стиль для посилань, щоб виглядали як кнопки */
+.pagination1 a {
+  display: inline-block;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #406a96; /* Синій фон */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Ефект при наведенні на кнопки */
+.pagination1 a:hover {
+  background-color: #758694; /* Темніший синій */
+  transform: scale(1.05); /* Легке збільшення */
+}
+/* Позиціювання посилання "Back to the menu" */
+/* .footer a {
+  display: inline-block; 
+  margin-top: 1em;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+} */
+footer a:hover {
+  text-decoration: none;
+}
+
+
+.back-to-menu {
+  display: inline-block;
+  margin: 1em 13%; /* Відступ від країв сторінки */
+  padding: 0.8em 1.5em; /* Внутрішні відступи для кнопки */
+  background-color:#1d3141; /* Синій фон */
+  color:#f7e7dc; /* Білий текст */
+  box-shadow: 1px 7px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none; /* Видаляємо підкреслення */
+  font-size: 1em; /* Розмір тексту */
+  border-radius: 5px; /* Згладжені кути */
+  transition: background-color 0.3s ease; /* Анімація при наведенні */
+}
+
+.back-to-menu:hover {
+  color:#4382b6;
+    transform: scale(1.05);
+}
+
+.back-to-menu1 {
+  display: inline-block;
+  margin: 0; /* Відступ від країв сторінки */
+  padding: 0.8em 1.5em; /* Внутрішні відступи для кнопки */
+  background-color: #007bff; /* Синій фон */
+  color: white; /* Білий текст */
+  text-decoration: none; /* Видаляємо підкреслення */
+  font-size: 1em; /* Розмір тексту */
+  border-radius: 5px; /* Згладжені кути */
+  transition: background-color 0.3s ease; /* Анімація при наведенні */
+  margin-bottom: 1em;
+}
+
+.back-to-menu1:hover {
+  color:#4382b6;
+  transform: scale(1.05);
+}
+
+.back-to-menu2{
+  display: inline-block;
+  margin: 0; /* Відступ від країв сторінки */
+  padding: 0.8em 1.5em; /* Внутрішні відступи для кнопки */
+  background-color: #0c4786; /* Синій фон */
+  color: white; /* Білий текст */
+  text-decoration: none; /* Видаляємо підкреслення */
+  font-size: 1em; /* Розмір тексту */
+  border-radius: 5px; /* Згладжені кути */
+  box-shadow: 1px 7px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease; /* Анімація при наведенні */
+  margin-bottom: 1em;
+}
+.back-to-menu2:hover {
+  color:#4382b6;
+  transform: scale(1.05);
+}
+
+.text1{
+  text-align: center;
+}
+
+.linkAsButton {
+  display: inline-block;
+ 
+  padding: 0.8em 1.5em; /* Внутрішні відступи для кнопки */
+  background-color:#1d3141; /* Синій фон */
+  color:#f7e7dc; /* Білий текст */
+  box-shadow: 1px 7px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none; /* Видаляємо підкреслення */
+  font-size: 1em; /* Розмір тексту */
+  border-radius: 5px; /* Згладжені кути */
+  transition: background-color 0.3s ease; /* Анімація при наведенні */
+
+}
+
+.linkAsButton:hover {
+  background-color: #4382b6;
+  color: #e2e6ea;
+}
+
+.linkAsButton:active {
+  background-color: #004085; 
+  color: #d6d8db;
+}
+
+#knopka{
+  margin-left: 30%;
+}
+
+
+/* Стиль для посилань у футері */
+  .linkAsButton1 {
+    display: inline-block;
+    background-color: #1d3141;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.linkAsButton1:hover {
+  background-color: #4382b6;
+}  
+
+
+  #knopky {
+    display: flex; /* Використовуємо flexbox для центрування */
+    flex-direction: row; /* Вирівнюємо кнопки горизонтально */
+    justify-content: center; /* Центруємо кнопки горизонтально */
+    align-items: center; /* Центруємо кнопки вертикально */
+    margin: 0; /* Відсутність зовнішніх відступів */
+  }
+
+#artn a{
+  text-decoration: none;
+}
+ 
+#try{
+  margin: 1em;
+  margin-left: 13%;
+}
+
+#upload{
+  margin-left: 38%
+  
+}
+
+.reset-all {
+  background-color: #d9534f; /* Червоний колір */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-all:hover {
+  background-color: #c9302c; /* Темніший червоний при наведенні */
+}
+/* html, body {
+    font-size: 100%;
+    font-family: "Oswald", Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  header, footer {
+    background-color: #758694;
+    color: #F7E7DC;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  header {
+    border-radius: 1rem;
+    font-size: 1.875em;
+  }
+  
+  footer {
+    font-size: 0.9em;
+  }
+  
+  main {
+    margin: 1em auto;
+    max-width: 80%;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+  
+  main > article {
+    background-color: #FFF6C4;
+    border-radius: 1rem;
+    padding: 1em;
+    margin-bottom: 1rem;
+  }
+  
+  main > article > h2 {
+    background-color: #FFD700;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 0.5rem;
+  }
+  
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 0.5em;
+    background-color: #405D72;
+    color: #F7E7DC;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    background-color: #4382B6;
+  }
+  
+ 
+  .cards {
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #DED8D4;
+    border-radius: 0.5rem;
+    padding: 1em;
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .card p {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .card .button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #758694;
+    color: #F7E7DC;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card .button:hover {
+    background-color: #4382B6;
+  }
+  
+  
+  .feedback-form {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #F9F9F9;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-form h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  .feedback-form label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  .feedback-form input,
+  .feedback-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #CCC;
+    border-radius: 0.5rem;
+  }
+  
+  .feedback-form button {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    background-color: #405D72;
+    color: #F7E7DC;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #324A59;
+  }
+  
+
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      gap: 1em;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  
+    .feedback-form {
+      width: 90%;
+    }
+  }
+   */
